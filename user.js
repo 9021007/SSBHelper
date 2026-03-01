@@ -64,7 +64,6 @@ function setupTimePickerListeners() {
 const observer = new MutationObserver((mutationsList, observer) => {
     for (const mutation of mutationsList) {
         if (mutation.type === 'childList') {
-            console.log('DOM changed, setting up listeners...');
             setupTimePickerListeners();
         }
     }
